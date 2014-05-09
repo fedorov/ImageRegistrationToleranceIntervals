@@ -1,0 +1,21 @@
+This project contains the R scripts, data and a Fortran routine that can be used
+to replicate the results and figures presented in [1].
+
+mproot-Mac and mproot-Linux directores contain a Fortran routine for solving Equation 
+1 from the paper using the Newton-Raphson algoritm. These directories have the code 
+compiled for Mac and Lunux platforms.
+
+To compile the routine for your platform and to call it from R, use the 
+following commands:
+
+R CMD COMPILE mproot.f
+R CMD SHLIB mproot.o
+
+If you use this code in any publication, please cite [1].
+
+Author: Mark Vangel, Massachusetts General Hospital, 2014
+
+[1] Fedorov A, Wells WM, Kikinis R, Tempany C, Vangel MG. Application of
+Tolerance Limits to the Characterization of Image Registration
+Performance. IEEE Transactions on Medical Imaging, 2014 (in press).
+DOI: 10.1109/TMI.2014.2317796
